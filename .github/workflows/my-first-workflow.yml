@@ -11,6 +11,11 @@ on:
     branches:
       - main                  # Only trigger when pushing to the 'main' branch
 
+  # Scheduled trigger at 14:15 (UTC+8), Monday through Friday
+  schedule:
+    - cron: '15 6 * * 1-5'
+
+
 # Define jobs for the workflow
 jobs:
   build:
