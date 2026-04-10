@@ -6,10 +6,18 @@ on:
   # Manual trigger using the workflow_dispatch event
   workflow_dispatch:
 
+
   # Automatic trigger on push events to the main branch
   push:                       # Trigger workflow on push events
     branches:
       - main                  # Only trigger when pushing to the 'main' branch
+
+
+  # Automatic trigger on pull request events targeting the main branch
+  pull_request:
+    branches:
+      - main
+
 
   # Scheduled trigger at 14:15 (UTC+8), Monday through Friday
   schedule:
